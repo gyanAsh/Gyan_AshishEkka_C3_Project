@@ -32,7 +32,10 @@ class RestaurantTest {
         //WRITTEN UNIT TEST CASE HERE
 
     }
-
+    @Test
+    public void get_Order_cost_should_return_388_when_item_two_item_one_with_119_and_other_with_269_price_is_added(){
+        assertEquals(388,restaurant.getOrderCost("Sweet corn soup","Vegetable lasagne") );
+    }
 
     //<<<<<<<<<<<<<<<<<<<<<<<<<OPEN/CLOSED>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
