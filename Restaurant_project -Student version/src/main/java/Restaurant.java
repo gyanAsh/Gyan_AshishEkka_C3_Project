@@ -9,7 +9,6 @@ public class Restaurant {
     public LocalTime openingTime;
     public LocalTime closingTime;
     private List<Item> menu = new ArrayList<Item>();
-    public int totalPrice=0;
 
     public Restaurant(String name, String location, LocalTime openingTime, LocalTime closingTime) {
         this.name = name;
@@ -69,15 +68,5 @@ public class Restaurant {
         return name;
     }
 
-    public int getOrderCost(String... itemName){
-        for(String nameOfItem: itemName){
-            for(Item item: menu){
-                if(item.getName().equals(nameOfItem)){
-                    totalPrice= totalPrice + item.getPrice();
-                }
-            }
-        }
-        return totalPrice;
-    }
 
 }
